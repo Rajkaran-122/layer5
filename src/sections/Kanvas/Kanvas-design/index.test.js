@@ -15,7 +15,9 @@ jest.mock('./kanvas-design-integrations', () => {
 });
 
 jest.mock('./Kanvas_Mobile_swiper/KanvasMobileSwiper', () => {
-  return jest.fn(() => <div>MockKanvasMobileSwiper</div>);
+  return {
+    KanvasMobileSwiper: jest.fn(() => <div>MockKanvasMobileSwiper</div>),
+  };
 });
 
 jest.mock('./kanvas-design-features-carousel', () => {
